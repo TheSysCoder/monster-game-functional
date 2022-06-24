@@ -1,16 +1,18 @@
 import "./styles.css";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="card-list">
-      <div className="card-container">
-        <img
-          src="https://robohash.org/1?set=set2&size=180x180"
-          alt="monsters"
-        />
-        <h2 className="monster-name">Monster Name</h2>
-        <p className="monster-email">Monster Email</p>
-      </div>
+      {props.monsters.map((monster) => (
+        <div className="card-container" key={monster.id}>
+          <img
+            src={`https://robohash.org/${monster.id}set=set2&size=180x180`}
+            alt="monsters"
+          />
+          <h2 className="monster-name">{monster.name}</h2>
+          <p className="monster-email">{monster.email}</p>
+        </div>
+      ))}
     </div>
   );
 };
