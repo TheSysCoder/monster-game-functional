@@ -1,0 +1,37 @@
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 85vh;
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+
+.card-container {
+  background-color: rgb(1, 163, 165);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+  transform: translate(0);
+  transition: transform 0.25s ease-out;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+.monster-name {
+  margin: 10 auto;
+  color: wheat;
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+.monster-email {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 400;
+}
